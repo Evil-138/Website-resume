@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanshu's Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for animations and hover effects */
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .smooth-transition {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .typing-effect {
+            border-right: .15em solid #d3d3d3;
+            white-space: nowrap;
+            overflow: hidden;
+            color: #d3d3d3;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink-caret {
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: #d3d3d3
+            }
+        }
+
+        .contact-input {
+            border: 2px solid #555;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .contact-input:focus {
+            border-color: #34d399;
+            background-color: #f0f0f0;
+            outline: none;
+            color: #000;
+        }
+
+        .bg-texture {
+            background-color: #f7fafc; /* Light gray background for texture */
+        }
+
+        .accent-color {
+            color: #34d399; /* Tailwind's emerald-400 color */
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            color: #1f2937; /* Tailwind's cool-gray-800 color */
+        }
+
+        .section-content {
+            font-family: 'Roboto', sans-serif;
+            color: #4b5563; /* Tailwind's cool-gray-600 color */
+        }
+
+        .btn {
+            background-color: #34d399;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #059669; /* Tailwind's emerald-600 color */
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Header Section -->
+    <header class="bg-green-500 text-white p-6 text-center">
+        <h1 id="header-title" class="text-4xl font-bold typing-effect"></h1>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-12 px-6 bg-gray-100 border-b border-gray-300">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h2 class="text-3xl font-bold mb-4 section-title">About Me</h2>
+            <p class="text-lg section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl. Sed euismod, leo ut facilisis aliquet, odio erat.</p>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section id="bio" class="py-12 px-6 bg-gray-100 border-b border-gray-300">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h2 class="text-3xl font-bold mb-4 section-title">Bio</h2>
+            <p class="text-lg section-content">I am a passionate and dedicated web developer and data scientist, eager to apply my unique skills in both fields. As a fresher, I bring a fresh perspective and a keen eye for detail. My skills include web development, data analysis, and machine learning. I am proficient in various programming languages and frameworks, and I thrive in collaborative environments where I can learn and grow. My goal is to leverage my technical expertise and creativity to contribute to innovative projects and drive success.</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-12 px-6 bg-gray-100 border-b border-gray-300">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h2 class="text-3xl font-bold mb-4 section-title">Education</h2>
+            <ul class="list-disc list-inside text-lg section-content">
+                <li>Bachelor of Science in Computer Science, XYZ University, 2024</li>
+                <li>Web Development Bootcamp, ABC Institute, 2023</li>
+                <li>Data Science Certification, DEF Academy, 2022</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 px-6 bg-gray-100 border-b border-gray-300">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-4 text-center section-title fade-in">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-200 p-6 rounded-lg shadow-lg hover-effect fade-in">
+                    <h3 class="text-xl font-bold mb-2 section-title">Project Title 1</h3>
+                    <p class="mb-2 section-content">A brief description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <img src="https://via.placeholder.com/300" alt="Project 1 Image" class="rounded-lg smooth-transition">
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-200 p-6 rounded-lg shadow-lg hover-effect fade-in">
+                    <h3 class="text-xl font-bold mb-2 section-title">Project Title 2</h3>
+                    <p class="mb-2 section-content">A brief description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <img src="https://via.placeholder.com/300" alt="Project 2 Image" class="rounded-lg smooth-transition">
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-12 px-6 bg-gray-100 border-b border-gray-300">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h2 class="text-3xl font-bold mb-4 section-title">Resume</h2>
+            <a href="#" class="btn">Download Resume</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 px-6 bg-gray-100 border-b border-gray-300">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h2 class="text-3xl font-bold mb-4 section-title">Contact Me</h2>
+            <form class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <input type="text" name="name" placeholder="Name" class="contact-input">
+                </div>
+                <div class="mb-4">
+                    <input type="tel" name="phone" placeholder="Phone Number" class="contact-input">
+                </div>
+                <div class="mb-4">
+                    <input type="email" name="email" placeholder="Email" class="contact-input">
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-200 text-black py-4 text-center">
+        <p>Made by Priyanshu</p>
+    </footer>
+
+    <script>
+        // JavaScript for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // JavaScript for fade-in effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.fade-in');
+            const options = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        // JavaScript for changing header text with typing effect
+        const headerTitles = [
+            "Priyanshu's Resume",
+            "Web Development",
+            "Data Science",
+            "Trading",
+            "Algo Trading",
+            "Python Development"
+        ];
+        let currentIndex = 0;
+        const headerTitleElement = document.getElementById('header-title');
+
+        function typeEffect(element, text, callback) {
+            element.textContent = '';
+            let i = 0;
+            const typingInterval = setInterval(() => {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typingInterval);
+                    setTimeout(callback, 3000); // 3 seconds gap before next typing effect
+                }
+            }, 100); // Adjust typing speed here
+        }
+
+        function loopHeaders() {
+            typeEffect(headerTitleElement, headerTitles[currentIndex], () => {
+                currentIndex = (currentIndex + 1) % headerTitles.length;
+                loopHeaders();
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loopHeaders);
+    </script>
+
+</body>
+
+</html>
